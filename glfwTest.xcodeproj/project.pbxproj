@@ -261,10 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = (
-					/usr/local/include/GL,
-					/usr/local/include/GLFW,
-				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glew/2.1.0_1/lib,
 					/usr/local/Cellar/glfw/3.3.2/lib,
@@ -277,10 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = (
-					/usr/local/include/GL,
-					/usr/local/include/GLFW,
-				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glew/2.1.0_1/lib,
 					/usr/local/Cellar/glfw/3.3.2/lib,
