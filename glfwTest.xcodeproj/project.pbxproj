@@ -34,6 +34,9 @@
 		A493F7EC25262593009C549D /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.1.0_1/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		A493F7EE252625B1009C549D /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		A4AD9DB72526EDE20078E338 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = glad/src/glad.c; sourceTree = SOURCE_ROOT; };
+		A4AD9DB92527592F0078E338 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		A4AD9DBE252762CD0078E338 /* myShader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = myShader.vs; sourceTree = "<group>"; };
+		A4AD9DBF252762CD0078E338 /* myShader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = myShader.fs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +73,11 @@
 		A4596A812526208600423EF3 /* glfwTest */ = {
 			isa = PBXGroup;
 			children = (
+				A4AD9DBF252762CD0078E338 /* myShader.fs */,
+				A4AD9DBE252762CD0078E338 /* myShader.vs */,
 				A4AD9DB72526EDE20078E338 /* glad.c */,
 				A4596A822526208600423EF3 /* main.cpp */,
+				A4AD9DB92527592F0078E338 /* Shader.h */,
 			);
 			path = glfwTest;
 			sourceTree = "<group>";
