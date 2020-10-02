@@ -11,6 +11,7 @@
 		A493F7EB252624B1009C549D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A493F7EA252624B1009C549D /* OpenGL.framework */; };
 		A493F7ED25262593009C549D /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A493F7EC25262593009C549D /* libGLEW.2.1.0.dylib */; };
 		A493F7EF252625B1009C549D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A493F7EE252625B1009C549D /* libglfw.3.3.dylib */; };
+		A4AD9DB82526EDE20078E338 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = A4AD9DB72526EDE20078E338 /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 		A493F7EA252624B1009C549D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		A493F7EC25262593009C549D /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.1.0_1/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		A493F7EE252625B1009C549D /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		A4AD9DB72526EDE20078E338 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = glad/src/glad.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		A4596A812526208600423EF3 /* glfwTest */ = {
 			isa = PBXGroup;
 			children = (
+				A4AD9DB72526EDE20078E338 /* glad.c */,
 				A4596A822526208600423EF3 /* main.cpp */,
 			);
 			path = glfwTest;
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4596A832526208600423EF3 /* main.cpp in Sources */,
+				A4AD9DB82526EDE20078E338 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +265,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"./glad/**",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glew/2.1.0_1/lib,
 					/usr/local/Cellar/glfw/3.3.2/lib,
@@ -274,7 +281,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"./glad/**",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/glew/2.1.0_1/lib,
 					/usr/local/Cellar/glfw/3.3.2/lib,

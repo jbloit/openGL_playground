@@ -11,49 +11,32 @@
  Project setup:
  https://www.youtube.com/watch?v=4zjCqjfjcPs
  */
+#include <iostream>
 
-#include <GL/glew.h>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 
 int main(int argc, const char * argv[]) {
 
-    GLFWwindow *window;
+      glfwInit();
+      glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+      glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+      glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+      //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     
-    
-    // init the library
-    if (!glfwInit())
+    GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
+    if (window == NULL)
     {
-        return -1;
-    }
-    
-    // create windowed mode and its opengl context
-    window = glfwCreateWindow(600, 400, "Hello", nullptr, nullptr);
-    if (!window)
-    {
+        std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
         return -1;
     }
-    
-    // make the windows conetxt current
     glfwMakeContextCurrent(window);
-    
-    // loop until user closes the window
-    while (!glfwWindowShouldClose(window))
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
-        glClear(GL_COLOR_BUFFER_BIT);
-        
-        //Render the opengl, put all your opengl code here
-        
-        
-        // swap front and back buffers
-        glfwSwapBuffers( window );
-        
-        // pool for and process events
-        glfwPollEvents();
+        std::cout << "Failed to initialize GLAD" << std::endl;
+        return -1;
     }
-    
-    glfwTerminate();
-    
-    return 0;
+      return 0;
 }
