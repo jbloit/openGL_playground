@@ -12,6 +12,7 @@
 		A493F7ED25262593009C549D /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A493F7EC25262593009C549D /* libGLEW.2.1.0.dylib */; };
 		A493F7EF252625B1009C549D /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A493F7EE252625B1009C549D /* libglfw.3.3.dylib */; };
 		A4AD9DB82526EDE20078E338 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = A4AD9DB72526EDE20078E338 /* glad.c */; };
+		A4AD9DC4252768CF0078E338 /* stbImageInit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4AD9DC3252768CF0078E338 /* stbImageInit.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		A4AD9DB92527592F0078E338 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		A4AD9DBE252762CD0078E338 /* myShader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = myShader.vs; sourceTree = "<group>"; };
 		A4AD9DBF252762CD0078E338 /* myShader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = myShader.fs; sourceTree = "<group>"; };
+		A4AD9DC2252768A10078E338 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		A4AD9DC3252768CF0078E338 /* stbImageInit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stbImageInit.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +76,13 @@
 		A4596A812526208600423EF3 /* glfwTest */ = {
 			isa = PBXGroup;
 			children = (
+				A4AD9DC2252768A10078E338 /* stb_image.h */,
 				A4AD9DBF252762CD0078E338 /* myShader.fs */,
 				A4AD9DBE252762CD0078E338 /* myShader.vs */,
 				A4AD9DB72526EDE20078E338 /* glad.c */,
 				A4596A822526208600423EF3 /* main.cpp */,
 				A4AD9DB92527592F0078E338 /* Shader.h */,
+				A4AD9DC3252768CF0078E338 /* stbImageInit.cpp */,
 			);
 			path = glfwTest;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4596A832526208600423EF3 /* main.cpp in Sources */,
+				A4AD9DC4252768CF0078E338 /* stbImageInit.cpp in Sources */,
 				A4AD9DB82526EDE20078E338 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
